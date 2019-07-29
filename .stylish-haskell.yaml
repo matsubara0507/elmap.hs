@@ -246,3 +246,4 @@ language_extensions:
 - TypeFamilies
 - TypeOperators
 - TypeSynonymInstances
+- MultiParamTypeClasses

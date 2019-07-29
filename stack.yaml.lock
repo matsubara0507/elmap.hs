@@ -11,6 +11,13 @@ packages:
       sha256: cd4fd21b75bfd977b30e73249d8edd5cc21a8b7fd0dd0c7f364987e0221d626d
   original:
     hackage: elm-bridge-0.5.1
+- completed:
+    hackage: servant-elm-0.6.0.2@sha256:ba836f5fdad315d8fec83380a8aabea6fc1a90f9f0681fe79e49d5e9bfa1e5e1,4540
+    pantry-tree:
+      size: 1938
+      sha256: 8e6e7d4cafb2a968b934e367642e1661989ea561ad205c8eb75d1df3b6525598
+  original:
+    hackage: servant-elm-0.6.0.2
 snapshots:
 - completed:
     size: 500539

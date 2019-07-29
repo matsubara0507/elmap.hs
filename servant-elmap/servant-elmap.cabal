@@ -1,0 +1,74 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: af804f03f7745233dcb85447e9df87e1c909378e3a4cbb911b8a3d72d6d34848
+
+name:           servant-elmap
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/matsubara0507/elmap#readme>
+homepage:       https://github.com/matsubara0507/elmap#readme
+bug-reports:    https://github.com/matsubara0507/elmap/issues
+author:         MATSUBARA Nobutada
+maintainer:     t12307043@gunma-u.ac.jp
+copyright:      MATSUBARA Nobutada
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/matsubara0507/elmap
+
+library
+  exposed-modules:
+      Servant.Elm.Mapping
+      Servant.Elm.Mapping.Foreign
+  other-modules:
+      Paths_servant_elmap
+  hs-source-dirs:
+      src
+  default-extensions: DataKinds FlexibleContexts FlexibleInstances MultiParamTypeClasses OverloadedStrings TypeApplications TypeFamilies TypeOperators
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , directory
+    , elm-bridge >=0.5
+    , elmap
+    , servant >=0.8
+    , servant-elm >=0.6
+    , servant-foreign >=0.8
+    , text
+    , wl-pprint-text
+  default-language: Haskell2010
+
+test-suite servant-elmap-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Test
+      Paths_servant_elmap
+  hs-source-dirs:
+      test
+  default-extensions: DataKinds FlexibleContexts FlexibleInstances MultiParamTypeClasses OverloadedStrings TypeApplications TypeFamilies TypeOperators
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , containers
+    , directory
+    , elm-bridge >=0.5
+    , elmap
+    , servant >=0.8
+    , servant-elm >=0.6
+    , servant-elmap
+    , servant-foreign >=0.8
+    , tasty
+    , tasty-hunit
+    , text
+    , wl-pprint-text
+  default-language: Haskell2010
