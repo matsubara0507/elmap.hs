@@ -32,6 +32,8 @@ tests = testGroup "Elm.Mapping"
           renderElm (compileElmType (Proxy @ ())) @?= "()"
       , testCase "compile Haslell's [a] to Elm's List a" $
           renderElm (compileElmType (Proxy @ [Int])) @?= "(List Int)"
+      , testCase "compile Haslell's Maybe a to Elm's Maybe a" $
+          renderElm (compileElmType (Proxy @ (Maybe Int))) @?= "(Maybe Int)"
       , testCase "compile Haslell's Map k v to Elm's Dict k v" $
           renderElm (compileElmType (Proxy @ (Map Int String))) @?= "(Dict Int String)"
       , testCase "compile Haslell's (a,b) to Elm's (a,b)" $

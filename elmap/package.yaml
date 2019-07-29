@@ -33,7 +33,7 @@ library:
   source-dirs: src
 
 tests:
-  mixlogue-test:
+  elmap-test:
     main: Spec.hs
     source-dirs: test
     dependencies:

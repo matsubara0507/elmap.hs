@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: fa384fd42c950f79149108bb83cf7e8c29bf1408ee49a2b487ed0c8f7f81fe8f
+-- hash: 2feff122acba4ed4511526024b1a49753750d8c77cc9aede47d2b01e2345fdc5
 
 name:           elmap
 version:        0.1.0.0
@@ -40,7 +40,7 @@ library
     , text
   default-language: Haskell2010
 
-test-suite mixlogue-test
+test-suite elmap-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:

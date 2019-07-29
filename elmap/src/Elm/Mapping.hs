@@ -35,6 +35,9 @@ instance IsElmType ()       where compileElmType _ = toElmType (Proxy @ ())
 instance {-# OVERLAPPABLE #-} IsElmType a => IsElmType [a] where
   compileElmType _ = ETyApp (ETyCon $ ETCon "List") (compileElmType (Proxy @ a))
 
+instance IsElmType a => IsElmType (Maybe a) where
+  compileElmType _ = ETyApp (ETyCon $ ETCon "Maybe") (compileElmType (Proxy @ a))
+
 instance (IsElmType k, IsElmType v) => IsElmType (Map k v) where
   compileElmType _ =
     foldl ETyApp (ETyCon $ ETCon "Dict")
