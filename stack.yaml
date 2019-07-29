@@ -1,0 +1,5 @@
+resolver: lts-13.29
+packages:
+- elmap
+extra-deps:
+- elm-bridge-0.5.1
