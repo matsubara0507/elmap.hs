@@ -1,6 +1,7 @@
 module Servant.Elm.Mapping
   ( module X
   , ElmOptions (..)
+  , defElmImports
   , defElmOptions
   , generateElmModule
   , generateElmModuleWith
@@ -17,7 +18,8 @@ import qualified Data.Text.Lazy                as TL
 import           Elm.Mapping                   as X
 import qualified Elm.Module                    as Elm
 import           Servant.Elm.Internal.Generate (ElmOptions (..), Namespace,
-                                                defElmOptions, docToText,
+                                                defElmImports, defElmOptions,
+                                                docToText,
                                                 generateElmForRequest)
 import           Servant.Elm.Mapping.Foreign   as X
 import qualified Servant.Foreign               as F
@@ -38,10 +40,11 @@ generateElmModuleWith options namespace imports rootDir typeDefs api = do
   TIO.writeFile fileName out
   where
     out = T.unlines $
-      [ imports
+      [ "module " <> moduleName <> " exposing(..)"
+      , imports
       , T.pack $ Elm.makeModuleContentWithAlterations (elmAlterations options) typeDefs
       ] ++ generateElmForAPIWith options api
-    moduleName = intercalate "." namespace
+    moduleName = T.pack $ intercalate "." namespace
     filePath = intercalate "/" $ rootDir : init namespace
     fileName = intercalate "/" $ filePath : [last namespace ++ ".elm"]
 
@@ -56,8 +59,7 @@ generateElmModule ::
   -> [Elm.DefineElm]
   -> Proxy api
   -> IO ()
-generateElmModule namespace imports filePath typeDefs api =
-  generateElmModuleWith defElmOptions namespace imports filePath typeDefs api
+generateElmModule = generateElmModuleWith defElmOptions
 
 generateElmForAPI ::
   (F.HasForeign LangElmap EType api, F.GenerateList EType (F.Foreign EType api))

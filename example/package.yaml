@@ -1,0 +1,55 @@
+name:                todoapp
+version:             0.1.0.0
+github:              "matsubara0507/elmap"
+license:             MIT
+author:              "MATSUBARA Nobutada"
+maintainer:          "t12307043@gunma-u.ac.jp"
+copyright:           "MATSUBARA Nobutada"
+
+description:         Please see the README on GitHub at <https://github.com/matsubara0507/elmap#readme>
+
+default-extensions:
+- DataKinds
+- FlexibleContexts
+- FlexibleInstances
+- OverloadedLabels
+- OverloadedStrings
+- TypeApplications
+- TypeOperators
+
+dependencies:
+- base >= 4.7 && < 5
+- elmap
+- extensible >= 0.6
+- extensible-elmap
+- servant-elmap
+
+executables:
+  todoapp:
+    main: Main.hs
+    source-dirs: app
+    dependencies:
+    - aeson
+    - blaze-html
+    - containers
+    - http-api-data
+    - microlens
+    - servant >= 0.8
+    - servant-blaze
+    - servant-server
+    - stm
+    - warp
+    other-modules:
+    - Orphans
+    - Todo
+
+tests:
+  generateElm:
+    main: Generate.hs
+    source-dirs: app
+    dependencies:
+    - servant
+    - servant-server
+    - process
+    other-modules:
+    - Todo

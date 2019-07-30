@@ -7,6 +7,7 @@ module Elm.Mapping
   , toElmTypeWith
   , renameEType
   , Proxy (..)
+  , DefineElm (..)
   ) where
 
 import           Data.Functor.Identity (Identity (..))
@@ -15,6 +16,7 @@ import           Data.Proxy            (Proxy (..))
 import           Data.Text             (Text)
 import qualified Data.Text             as Text
 import           Data.Typeable         (Typeable)
+import           Elm.Module            (DefineElm (..))
 import           Elm.TyRender          as X
 import           Elm.TyRep             as X
 

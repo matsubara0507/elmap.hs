@@ -3,6 +3,7 @@ packages:
 - elmap
 - extensible-elmap
 - servant-elmap
+- example
 extra-deps:
 - elm-bridge-0.5.1
 - extensible-0.6

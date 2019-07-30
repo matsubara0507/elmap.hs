@@ -1,0 +1,67 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: b032aceec352ef49011c14933703749fdf82df5afd1006ae8d48b37cb8d79662
+
+name:           todoapp
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/matsubara0507/elmap#readme>
+homepage:       https://github.com/matsubara0507/elmap#readme
+bug-reports:    https://github.com/matsubara0507/elmap/issues
+author:         MATSUBARA Nobutada
+maintainer:     t12307043@gunma-u.ac.jp
+copyright:      MATSUBARA Nobutada
+license:        MIT
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/matsubara0507/elmap
+
+executable todoapp
+  main-is: Main.hs
+  other-modules:
+      Orphans
+      Todo
+  hs-source-dirs:
+      app
+  default-extensions: DataKinds FlexibleContexts FlexibleInstances OverloadedLabels OverloadedStrings TypeApplications TypeOperators
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , blaze-html
+    , containers
+    , elmap
+    , extensible >=0.6
+    , extensible-elmap
+    , http-api-data
+    , microlens
+    , servant >=0.8
+    , servant-blaze
+    , servant-elmap
+    , servant-server
+    , stm
+    , warp
+  default-language: Haskell2010
+
+test-suite generateElm
+  type: exitcode-stdio-1.0
+  main-is: Generate.hs
+  other-modules:
+      Todo
+  hs-source-dirs:
+      app
+  default-extensions: DataKinds FlexibleContexts FlexibleInstances OverloadedLabels OverloadedStrings TypeApplications TypeOperators
+  build-depends:
+      base >=4.7 && <5
+    , elmap
+    , extensible >=0.6
+    , extensible-elmap
+    , process
+    , servant
+    , servant-elmap
+    , servant-server
+  default-language: Haskell2010
