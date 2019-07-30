@@ -1,0 +1,57 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 91fa6c292835f0d3116ee075fc68b325ffe1b5e99e0b8054dad5c657e6a5ab81
+
+name:           extensible-elmap
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/matsubara0507/elmap#readme>
+homepage:       https://github.com/matsubara0507/elmap#readme
+bug-reports:    https://github.com/matsubara0507/elmap/issues
+author:         MATSUBARA Nobutada
+maintainer:     t12307043@gunma-u.ac.jp
+copyright:      MATSUBARA Nobutada
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/matsubara0507/elmap
+
+library
+  exposed-modules:
+      Data.Extensible.Elm.Mapping
+  other-modules:
+      Paths_extensible_elmap
+  hs-source-dirs:
+      src
+  default-extensions: DataKinds FlexibleContexts TypeApplications TypeOperators
+  build-depends:
+      base >=4.7 && <5
+    , elmap
+    , extensible >=0.6
+  default-language: Haskell2010
+
+test-suite extensible-elmap-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_extensible_elmap
+  hs-source-dirs:
+      test
+  default-extensions: DataKinds FlexibleContexts TypeApplications TypeOperators
+  build-depends:
+      base >=4.7 && <5
+    , elmap
+    , extensible >=0.6
+    , extensible-elmap
+    , tasty
+    , tasty-hunit
+  default-language: Haskell2010

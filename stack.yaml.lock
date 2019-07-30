@@ -12,6 +12,20 @@ packages:
   original:
     hackage: elm-bridge-0.5.1
 - completed:
+    hackage: extensible-0.6@sha256:57b756098ad50590864bfa3c95c23aa83fa89eedcf2ef019b7c5da6232c1b476,2858
+    pantry-tree:
+      size: 2294
+      sha256: 71f8b5cead10453ba042710c8a379affcab2f7bbac0c348d84610cb59697c0a3
+  original:
+    hackage: extensible-0.6
+- completed:
+    hackage: membership-0@sha256:3a11d8fd53cb1a76bb9273e6c929bbf9d649f109714bf487abb3143be04ddc81,995
+    pantry-tree:
+      size: 408
+      sha256: 3b593e0d14e848e318e745555776ebb25210e5e3dec4fde5d3c08ab51ceddc62
+  original:
+    hackage: membership-0
+- completed:
     hackage: servant-elm-0.6.0.2@sha256:ba836f5fdad315d8fec83380a8aabea6fc1a90f9f0681fe79e49d5e9bfa1e5e1,4540
     pantry-tree:
       size: 1938

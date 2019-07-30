@@ -1,7 +1,10 @@
 resolver: lts-13.29
 packages:
 - elmap
+- extensible-elmap
 - servant-elmap
 extra-deps:
 - elm-bridge-0.5.1
+- extensible-0.6
+- membership-0
 - servant-elm-0.6.0.2

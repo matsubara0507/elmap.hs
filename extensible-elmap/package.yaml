@@ -1,0 +1,43 @@
+name:                extensible-elmap
+version:             0.1.0.0
+github:              "matsubara0507/elmap"
+license:             BSD3
+author:              "MATSUBARA Nobutada"
+maintainer:          "t12307043@gunma-u.ac.jp"
+copyright:           "MATSUBARA Nobutada"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/matsubara0507/elmap#readme>
+
+default-extensions:
+- DataKinds
+- FlexibleContexts
+- TypeApplications
+- TypeOperators
+
+dependencies:
+- base >= 4.7 && < 5
+- elmap
+- extensible >= 0.6
+
+library:
+  source-dirs: src
+
+tests:
+  extensible-elmap-test:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+    - extensible-elmap
+    - tasty
+    - tasty-hunit
