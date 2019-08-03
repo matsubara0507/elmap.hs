@@ -73,5 +73,4 @@ generateElmForAPIWith ::
   -> Proxy api
   -> [Text]
 generateElmForAPIWith opts =
-  intersperse "" . nub . map docToText
-    . map (generateElmForRequest opts) . getEndpoints
+  intersperse "" . nub . map (docToText . generateElmForRequest opts) . getEndpoints

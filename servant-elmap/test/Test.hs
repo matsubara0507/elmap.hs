@@ -10,7 +10,7 @@ import           GHC.Generics
 import           Servant.API
 import           Servant.Elm.Mapping
 
-data Book = Book
+newtype Book = Book
     { title :: String
     } deriving (Generic, Show)
 

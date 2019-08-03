@@ -56,7 +56,7 @@ server db = indexHtml
       H.script ! H.src "static/index.js" $ H.text ""
     primerCss = "https://cdnjs.cloudflare.com/ajax/libs/Primer/11.0.0/build.css"
     fontAwesomeCss = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    getTodos = liftIO $ IntMap.elems . snd <$> atomically (readTVar db)
+    getTodos = liftIO $ IntMap.elems . snd <$> readTVarIO db
     postTodo todo = liftIO . atomically $ do
       (maxId, m) <- readTVar db
       let newId = maxId + 1
