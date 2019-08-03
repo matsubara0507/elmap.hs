@@ -10,13 +10,13 @@ import           Data.Extensible
 import           Elm.Mapping
 import           GHC.TypeLits    (KnownSymbol)
 
-compileElmRecordTypeWith :: String -> Proxy (Record xs) -> EType
+compileElmRecordTypeWith :: String -> Proxy (RecordOf h xs) -> EType
 compileElmRecordTypeWith name _ = ETyCon $ ETCon name
 
 compileElmRecordAliasWith ::
-  forall xs . Forall (KeyTargetAre KnownSymbol IsElmType) xs
+  forall xs h . Forall (KeyTargetAre KnownSymbol IsElmType) xs
   => String
-  -> Proxy (Record xs)
+  -> Proxy (RecordOf h xs)
   -> EAlias
 compileElmRecordAliasWith name _ = EAlias
   { ea_name = ETypeName name []
