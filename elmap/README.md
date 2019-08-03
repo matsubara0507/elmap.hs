@@ -13,17 +13,7 @@ instance IsElmType Book where
   compileElmType _ = ETyCon $ ETCon "Book"
 
 instance IsElmDefinition Book where
-  compileElmDef _ = ETypeAlias $ EAlias
-    { ea_name = ETypeName "Book" []
-    , ea_fields =
-        [ ("title", compileElmType (Proxy @ String))
-        , ("author", compileElmType (Proxy @ String))
-        , ("pages", compileElmType (Proxy @ Int))
-        ]
-    , ea_omit_null = False
-    , ea_newtype = False
-    , ea_unwrap_unary = True
-    }
+  compileElmDef = ETypeAlias . toElmAlias
 ```
 
 using ghci

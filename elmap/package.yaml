@@ -20,8 +20,12 @@ extra-source-files:
 description:         Please see the README on GitHub at <https://github.com/matsubara0507/elmap#readme>
 
 default-extensions:
+- DataKinds
+- FlexibleContexts
 - OverloadedStrings
 - TypeApplications
+- TypeFamilies
+- TypeOperators
 
 dependencies:
 - base >= 4.7 && < 5

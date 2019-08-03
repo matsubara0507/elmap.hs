@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 2feff122acba4ed4511526024b1a49753750d8c77cc9aede47d2b01e2345fdc5
+-- hash: 7369864a021f210a5b6426e06814e2c6d78b14c980f1e1457aea254837387c07
 
 name:           elmap
 version:        0.1.0.0
@@ -32,7 +32,7 @@ library
       Paths_elmap
   hs-source-dirs:
       src
-  default-extensions: OverloadedStrings TypeApplications
+  default-extensions: DataKinds FlexibleContexts OverloadedStrings TypeApplications TypeFamilies TypeOperators
   build-depends:
       base >=4.7 && <5
     , containers
@@ -48,7 +48,7 @@ test-suite elmap-test
       Paths_elmap
   hs-source-dirs:
       test
-  default-extensions: OverloadedStrings TypeApplications
+  default-extensions: DataKinds FlexibleContexts OverloadedStrings TypeApplications TypeFamilies TypeOperators
   build-depends:
       base >=4.7 && <5
     , containers

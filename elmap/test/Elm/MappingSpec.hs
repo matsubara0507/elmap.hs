@@ -1,9 +1,12 @@
+{-# LANGUAGE DeriveGeneric #-}
+
 module Elm.MappingSpec where
 
 import           Data.Functor.Identity (Identity)
 import           Data.Map              (Map)
 import           Data.Text             (Text)
 import           Elm.Mapping
+import           GHC.Generics          (Generic)
 import           Test.Tasty
 import           Test.Tasty.HUnit
 
@@ -55,4 +58,31 @@ tests = testGroup "Elm.Mapping"
       , testCase "ETyTuple" $
           renameEType "Hoge" (ETyTuple 2) @?= ETyTuple 2
       ]
+  , testGroup "toElmAlias"
+      [ testCase "Book" $ do
+          let expected = EAlias
+                { ea_name = ETypeName "Book" []
+                , ea_fields =
+                    [ ("title", compileElmType (Proxy @ String))
+                    , ("author", compileElmType (Proxy @ String))
+                    , ("pages", compileElmType (Proxy @ Int))
+                    ]
+                , ea_omit_null = False
+                , ea_newtype = False
+                , ea_unwrap_unary = True
+                }
+          toElmAlias (Proxy @ Book) @?= expected
+      ]
   ]
+
+data Book = Book
+    { title  :: String
+    , author :: String
+    , pages  :: Int
+    } deriving (Generic, Show, Eq)
+
+instance IsElmType Book where
+  compileElmType _ = ETyCon $ ETCon "Book"
+
+instance IsElmDefinition Book where
+  compileElmDef = ETypeAlias . toElmAlias
