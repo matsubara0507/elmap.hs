@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b032aceec352ef49011c14933703749fdf82df5afd1006ae8d48b37cb8d79662
+-- hash: 82db0da378a1801fdaef8610a0bd0bed040c44d8fab0092bf07e4aba4e6a15c5
 
 name:           todoapp
 version:        0.1.0.0
@@ -29,6 +29,7 @@ executable todoapp
   hs-source-dirs:
       app
   default-extensions: DataKinds FlexibleContexts FlexibleInstances OverloadedLabels OverloadedStrings TypeApplications TypeOperators
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
   build-depends:
       aeson
     , base >=4.7 && <5
@@ -55,6 +56,7 @@ test-suite generateElm
   hs-source-dirs:
       app
   default-extensions: DataKinds FlexibleContexts FlexibleInstances OverloadedLabels OverloadedStrings TypeApplications TypeOperators
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
     , elmap

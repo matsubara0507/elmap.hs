@@ -9,7 +9,6 @@ module Main where
 
 import           Control.Concurrent.STM
 import           Control.Monad.IO.Class      (liftIO)
-import           Data.Aeson                  (Object)
 import           Data.Extensible
 import           Data.IntMap                 (IntMap)
 import qualified Data.IntMap                 as IntMap

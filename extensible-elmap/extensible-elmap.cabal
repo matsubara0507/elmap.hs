@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 91fa6c292835f0d3116ee075fc68b325ffe1b5e99e0b8054dad5c657e6a5ab81
+-- hash: c3bdf313d4218b30be7978d52519d823abd21367ca05bbcc3e3bb736f9584a38
 
 name:           extensible-elmap
 version:        0.1.0.0
@@ -33,6 +33,7 @@ library
   hs-source-dirs:
       src
   default-extensions: DataKinds FlexibleContexts TypeApplications TypeOperators
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
     , elmap
@@ -47,6 +48,7 @@ test-suite extensible-elmap-test
   hs-source-dirs:
       test
   default-extensions: DataKinds FlexibleContexts TypeApplications TypeOperators
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
     , elmap

@@ -17,7 +17,6 @@ import           Data.Kind             (Type)
 import           Data.Map              (Map)
 import           Data.Proxy            (Proxy (..))
 import           Data.Text             (Text)
-import qualified Data.Text             as Text
 import           Data.Typeable         (Typeable)
 import           Elm.Module            (DefineElm (..))
 import           Elm.TyRender          as X
@@ -86,7 +85,7 @@ renameEType name (ETyCon _)     = ETyCon $ ETCon name
 renameEType name (ETyApp t1 t2) = ETyApp (renameEType name t1) t2
 renameEType _ t                 = t
 
-toElmAlias :: forall a. (Generic a, GIsElmFields (Rep a), IsElmType a) => Proxy a -> EAlias
+toElmAlias :: forall a. (GIsElmFields (Rep a), IsElmType a) => Proxy a -> EAlias
 toElmAlias proxy = EAlias
   { ea_name = ETypeName (renderElm $ compileElmType proxy) []
   , ea_fields = gcompileElmFields (Proxy @ (Rep a))

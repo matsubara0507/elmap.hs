@@ -12,9 +12,7 @@ module Servant.Elm.Mapping
 import           Data.List                     (intercalate, intersperse, nub)
 import           Data.Text                     (Text)
 import qualified Data.Text                     as T
-import qualified Data.Text.Encoding            as T
 import           Data.Text.IO                  as TIO
-import qualified Data.Text.Lazy                as TL
 import           Elm.Mapping                   as X
 import qualified Elm.Module                    as Elm
 import           Servant.Elm.Internal.Generate (ElmOptions (..), Namespace,
@@ -24,7 +22,6 @@ import           Servant.Elm.Internal.Generate (ElmOptions (..), Namespace,
 import           Servant.Elm.Mapping.Foreign   as X
 import qualified Servant.Foreign               as F
 import           System.Directory              (createDirectoryIfMissing)
-import           Text.PrettyPrint.Leijen.Text
 
 generateElmModuleWith ::
   (F.HasForeign LangElmap EType api, F.GenerateList EType (F.Foreign EType api))

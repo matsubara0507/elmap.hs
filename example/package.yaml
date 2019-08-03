@@ -8,6 +8,13 @@ copyright:           "MATSUBARA Nobutada"
 
 description:         Please see the README on GitHub at <https://github.com/matsubara0507/elmap#readme>
 
+ghc-options:
+- -Wall
+- -Wcompat
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wredundant-constraints
+
 default-extensions:
 - DataKinds
 - FlexibleContexts
