@@ -3,7 +3,6 @@
 module Orphans () where
 
 import           Data.Extensible
-import           GHC.TypeLits       (symbolVal)
 import           Web.FormUrlEncoded
 import           Web.HttpApiData
 
