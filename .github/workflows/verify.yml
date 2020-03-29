@@ -1,0 +1,28 @@
+name: Verify
+
+on:
+  pull_request: null
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+    name: verify projects
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Cache .stack
+      id: cache-stack
+      uses: actions/cache@v1.1.2
+      with:
+        path: ~/.stack
+        key: ${{ runner.os }}-stack-${{ hashFiles('**/stack.yaml') }}-1
+        restore-keys: |
+          ${{ runner.os }}-stack-
+    - uses: matsubara0507/setup-stack@master
+    - uses: jorelali/setup-elm@v1
+    - name: Install dependencies
+      run: stack --no-terminal test --only-dependencies
+    - name: Exec test
+      run: stack --no-terminal test --no-haddock-deps --pedantic
