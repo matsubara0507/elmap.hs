@@ -12,7 +12,7 @@ import           Test.Tasty.HUnit
 
 main :: IO ()
 main = do
-  expected <- Text.lines . Text.pack <$> readFile "test/Expected.elm"
+  expected <- Text.pack <$> readFile "test/Expected.elm"
   defaultMain $ testGroup "Servant.Elm.Mapping"
-    [ testCase "generateElmForAPI" $ generateElmForAPI Test.api @?= expected
+    [ testCase "generateElmForAPI" $ (Text.unlines $ generateElmForAPI Test.api) @?= expected
     ]

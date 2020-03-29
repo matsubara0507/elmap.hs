@@ -1,11 +1,9 @@
-resolver: lts-13.29
+resolver: lts-15.5
 packages:
 - elmap
 - extensible-elmap
 - servant-elmap
 - example
 extra-deps:
-- elm-bridge-0.5.1
-- extensible-0.6
+- extensible-0.8
 - membership-0
-- servant-elm-0.6.0.2

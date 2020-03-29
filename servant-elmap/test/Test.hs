@@ -4,7 +4,6 @@ module Test where
 
 import           Data.Aeson          (ToJSON (..), defaultOptions,
                                       genericToEncoding)
-import           Data.Proxy          (Proxy (Proxy))
 import           Data.Text           (Text)
 import           GHC.Generics
 import           Servant.API

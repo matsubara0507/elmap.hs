@@ -8,7 +8,6 @@ module Data.Extensible.Elm.Mapping
 
 import           Data.Extensible
 import           Elm.Mapping
-import           GHC.TypeLits    (KnownSymbol)
 
 compileElmRecordTypeWith :: String -> Proxy (RecordOf h xs) -> EType
 compileElmRecordTypeWith name _ = ETyCon $ ETCon name
