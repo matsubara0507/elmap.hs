@@ -3,6 +3,7 @@
 module Orphans () where
 
 import           Data.Extensible
+import           Data.Functor.Identity (Identity)
 import           Web.FormUrlEncoded
 import           Web.HttpApiData
 

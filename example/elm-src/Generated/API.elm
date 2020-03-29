@@ -1,4 +1,4 @@
-module Generated.API exposing (Todo, deleteApiTodosById, getApiTodos, jsonDecTodo, jsonEncTodo, maybeBoolToIntStr, postApiTodos, putApiTodosById)
+module Generated.API exposing (Todo, deleteApiTodosById, getApiTodos, jsonDecTodo, jsonEncTodo, postApiTodos, putApiTodosById)
 
 -- The following module comes from bartavelle/json-helpers
 
@@ -10,19 +10,6 @@ import Json.Helpers exposing (..)
 import Set
 import String
 import Url.Builder
-
-
-maybeBoolToIntStr : Maybe Bool -> String
-maybeBoolToIntStr mx =
-    case mx of
-        Nothing ->
-            ""
-
-        Just True ->
-            "1"
-
-        Just False ->
-            "0"
 
 
 type alias Todo =
