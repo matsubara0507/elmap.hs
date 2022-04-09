@@ -5,22 +5,33 @@
 
 packages:
 - completed:
-    hackage: extensible-0.8@sha256:45ca089909ae434329e4d05dc557be94ff04f24c43ff9b915bd90c0599c83211,2911
+    size: 374222
+    url: https://github.com/fumieval/extensible/archive/4a1edb50c90d377085fcc3bad4c9f6e9d296b00e.tar.gz
+    name: extensible
+    version: '0.9'
+    sha256: 8005a29db91b0a67018162b69c913ddf722bdc527f5565caef2644f6ffcd0c95
     pantry-tree:
-      size: 2097
-      sha256: d602c9d623afd9186a4d55898ef97f0dfb7f81ffbd5bae86e2238b3694d702fb
+      size: 2982
+      sha256: 77c619f82592a969dbb6a7f5e303063678feeb965b085b9c926e6887621521af
   original:
-    hackage: extensible-0.8
+    url: https://github.com/fumieval/extensible/archive/4a1edb50c90d377085fcc3bad4c9f6e9d296b00e.tar.gz
 - completed:
-    hackage: membership-0@sha256:3a11d8fd53cb1a76bb9273e6c929bbf9d649f109714bf487abb3143be04ddc81,995
+    hackage: membership-0.0.1@sha256:6c4d4ab6e3fb3253c6c670e8a63f74454dc91be50b9f292d0b1355792190aee5,999
     pantry-tree:
       size: 408
-      sha256: 3b593e0d14e848e318e745555776ebb25210e5e3dec4fde5d3c08ab51ceddc62
+      sha256: b918a1a207108313b2bf453b0d9aa65122d9845c4b360c8ade46d3429ff1107a
   original:
-    hackage: membership-0
+    hackage: membership-0.0.1
+- completed:
+    hackage: incremental-0.3.1@sha256:9c697bae4f7e5ceb144bde13e03ca2f36b4bc2d0c92bbc02e0a604231ee279c2,1153
+    pantry-tree:
+      size: 370
+      sha256: fd5f40352dbf1602babd2c5db2a120c26e57bbd5ad30b19ce24d04189f6a18d1
+  original:
+    hackage: incremental-0.3.1
 snapshots:
 - completed:
-    size: 491372
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/15/5.yaml
-    sha256: 1b549cfff328040c382a70a84a2087aac8dab6d778bf92f32a93a771a1980dfc
-  original: lts-15.5
+    size: 548274
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/nightly/2022/4/9.yaml
+    sha256: e8bcfd26c8e645fbefb63c030005e41877a7122940245a20db942acc6ff4d84d
+  original: nightly-2022-04-09

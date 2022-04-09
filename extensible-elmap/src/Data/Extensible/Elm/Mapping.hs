@@ -26,7 +26,7 @@ compileElmRecordAliasWith name _ = EAlias
   }
   where
     fields = henumerateFor
-      (Proxy @ (KeyTargetAre KnownSymbol IsElmType))
-      (Proxy @ xs)
+      (Proxy @(KeyTargetAre KnownSymbol IsElmType))
+      (Proxy @xs)
       (\m acc -> (stringKeyOf m, compileElmType $ proxyTargetOf m) : acc)
       []

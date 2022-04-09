@@ -1,13 +1,13 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.31.2.
+-- This file has been generated from package.yaml by hpack version 0.34.4.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 4f2a205a7d0efac1a1a1cf356650e6f3bcee55759a196cafd9051848812a98ac
+-- hash: df459360e9b5537bd50ebb8e481cdc94974ed0296a2db10df58dabbbf36dcfb2
 
 name:           servant-elmap
-version:        0.1.0.0
+version:        0.1.0.1
 description:    Please see the README on GitHub at <https://github.com/matsubara0507/elmap#readme>
 homepage:       https://github.com/matsubara0507/elmap#readme
 bug-reports:    https://github.com/matsubara0507/elmap/issues
@@ -33,7 +33,15 @@ library
       Paths_servant_elmap
   hs-source-dirs:
       src
-  default-extensions: DataKinds FlexibleContexts FlexibleInstances MultiParamTypeClasses OverloadedStrings TypeApplications TypeFamilies TypeOperators
+  default-extensions:
+      DataKinds
+      FlexibleContexts
+      FlexibleInstances
+      MultiParamTypeClasses
+      OverloadedStrings
+      TypeApplications
+      TypeFamilies
+      TypeOperators
   ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
@@ -56,7 +64,15 @@ test-suite servant-elmap-test
       Paths_servant_elmap
   hs-source-dirs:
       test
-  default-extensions: DataKinds FlexibleContexts FlexibleInstances MultiParamTypeClasses OverloadedStrings TypeApplications TypeFamilies TypeOperators
+  default-extensions:
+      DataKinds
+      FlexibleContexts
+      FlexibleInstances
+      MultiParamTypeClasses
+      OverloadedStrings
+      TypeApplications
+      TypeFamilies
+      TypeOperators
   ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
   build-depends:
       aeson

@@ -1,9 +1,12 @@
-resolver: lts-15.5
+resolver: nightly-2022-04-09
 packages:
 - elmap
 - extensible-elmap
 - servant-elmap
 - example
 extra-deps:
-- extensible-0.8
-- membership-0
+# - extensible-0.8.3
+- github: fumieval/extensible
+  commit: 4a1edb50c90d377085fcc3bad4c9f6e9d296b00e
+- membership-0.0.1
+- incremental-0.3.1

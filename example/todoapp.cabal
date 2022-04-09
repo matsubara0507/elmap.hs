@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.31.2.
+-- This file has been generated from package.yaml by hpack version 0.34.4.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 82db0da378a1801fdaef8610a0bd0bed040c44d8fab0092bf07e4aba4e6a15c5
+-- hash: 8b14774313df6dd212861bfb66d25479267d13df131c8cfa2a0719239fcdae85
 
 name:           todoapp
 version:        0.1.0.0
@@ -28,7 +28,14 @@ executable todoapp
       Todo
   hs-source-dirs:
       app
-  default-extensions: DataKinds FlexibleContexts FlexibleInstances OverloadedLabels OverloadedStrings TypeApplications TypeOperators
+  default-extensions:
+      DataKinds
+      FlexibleContexts
+      FlexibleInstances
+      OverloadedLabels
+      OverloadedStrings
+      TypeApplications
+      TypeOperators
   ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
   build-depends:
       aeson
@@ -38,7 +45,7 @@ executable todoapp
     , elmap
     , extensible >=0.6
     , extensible-elmap
-    , http-api-data
+    , http-api-data >=0.4.2
     , microlens
     , servant >=0.8
     , servant-blaze
@@ -55,7 +62,14 @@ test-suite generateElm
       Todo
   hs-source-dirs:
       app
-  default-extensions: DataKinds FlexibleContexts FlexibleInstances OverloadedLabels OverloadedStrings TypeApplications TypeOperators
+  default-extensions:
+      DataKinds
+      FlexibleContexts
+      FlexibleInstances
+      OverloadedLabels
+      OverloadedStrings
+      TypeApplications
+      TypeOperators
   ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
   build-depends:
       base >=4.7 && <5

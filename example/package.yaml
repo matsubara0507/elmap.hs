@@ -1,5 +1,5 @@
 name:                todoapp
-version:             0.1.0.0
+version:             0.1.0.1
 github:              "matsubara0507/elmap"
 license:             MIT
 author:              "MATSUBARA Nobutada"
@@ -39,7 +39,7 @@ executables:
     - aeson
     - blaze-html
     - containers
-    - http-api-data
+    - http-api-data >= 0.4.2
     - microlens
     - servant >= 0.8
     - servant-blaze
