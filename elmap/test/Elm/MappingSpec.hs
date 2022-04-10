@@ -14,39 +14,39 @@ tests :: TestTree
 tests = testGroup "Elm.Mapping"
   [ testGroup "compileElmType"
       [ testCase "compile Haslell's Int to Elm's Int" $
-          renderElm (compileElmType (Proxy @ Int)) @?= "Int"
+          renderElm (compileElmType (Proxy @Int)) @?= "Int"
       , testCase "compile Haslell's Integer to Elm's Int" $
-          renderElm (compileElmType (Proxy @ Integer)) @?= "Int"
+          renderElm (compileElmType (Proxy @Integer)) @?= "Int"
       , testCase "compile Haslell's Float to Elm's Float" $
-          renderElm (compileElmType (Proxy @ Float)) @?= "Float"
+          renderElm (compileElmType (Proxy @Float)) @?= "Float"
       , testCase "compile Haslell's Double to Elm's Float" $
-          renderElm (compileElmType (Proxy @ Double)) @?= "Float"
+          renderElm (compileElmType (Proxy @Double)) @?= "Float"
       , testCase "compile Haslell's Ordering to Elm's Float" $
-          renderElm (compileElmType (Proxy @ Ordering)) @?= "Order"
+          renderElm (compileElmType (Proxy @Ordering)) @?= "Order"
       , testCase "compile Haslell's Bool to Elm's Bool" $
-          renderElm (compileElmType (Proxy @ Bool)) @?= "Bool"
+          renderElm (compileElmType (Proxy @Bool)) @?= "Bool"
       , testCase "compile Haslell's Char to Elm's Char" $
-          renderElm (compileElmType (Proxy @ Char)) @?= "Char"
+          renderElm (compileElmType (Proxy @Char)) @?= "Char"
       , testCase "compile Haslell's String to Elm's String" $
-          renderElm (compileElmType (Proxy @ String)) @?= "String"
+          renderElm (compileElmType (Proxy @String)) @?= "String"
       , testCase "compile Haslell's Text to Elm's String" $
-          renderElm (compileElmType (Proxy @ Text)) @?= "String"
+          renderElm (compileElmType (Proxy @Text)) @?= "String"
       , testCase "compile Haslell's () to Elm's ()" $
-          renderElm (compileElmType (Proxy @ ())) @?= "()"
+          renderElm (compileElmType (Proxy @())) @?= "()"
       , testCase "compile Haslell's [a] to Elm's List a" $
-          renderElm (compileElmType (Proxy @ [Int])) @?= "(List Int)"
+          renderElm (compileElmType (Proxy @[Int])) @?= "(List Int)"
       , testCase "compile Haslell's Maybe a to Elm's Maybe a" $
-          renderElm (compileElmType (Proxy @ (Maybe Int))) @?= "(Maybe Int)"
+          renderElm (compileElmType (Proxy @(Maybe Int))) @?= "(Maybe Int)"
       , testCase "compile Haslell's Map k v to Elm's Dict k v" $
-          renderElm (compileElmType (Proxy @ (Map Int String))) @?= "(Dict Int String)"
+          renderElm (compileElmType (Proxy @(Map Int String))) @?= "(Dict Int String)"
       , testCase "compile Haslell's (a,b) to Elm's (a,b)" $
-          renderElm (compileElmType (Proxy @ (Int, Float))) @?= "(Int, Float)"
+          renderElm (compileElmType (Proxy @(Int, Float))) @?= "(Int, Float)"
       , testCase "compile Haslell's (a,b,c) to Elm's (a,b,c)" $
-          renderElm (compileElmType (Proxy @ (Int, Float, String))) @?= "(Int, Float, String)"
+          renderElm (compileElmType (Proxy @(Int, Float, String))) @?= "(Int, Float, String)"
       , testCase "compile Haslell's (a,b,c,d) to Elm's (a,b,c,d)" $
-          renderElm (compileElmType (Proxy @ (Int, Float, String, Bool))) @?= "(Int, Float, String, Bool)"
+          renderElm (compileElmType (Proxy @(Int, Float, String, Bool))) @?= "(Int, Float, String, Bool)"
       , testCase "compile Haslell's Identity a to Elm's a" $
-          renderElm (compileElmType (Proxy @ (Identity Int))) @?= "Int"
+          renderElm (compileElmType (Proxy @(Identity Int))) @?= "Int"
       ]
   , testGroup "renameEType"
       [ testCase "ETyVar" $
@@ -63,15 +63,15 @@ tests = testGroup "Elm.Mapping"
           let expected = EAlias
                 { ea_name = ETypeName "Book" []
                 , ea_fields =
-                    [ ("title", compileElmType (Proxy @ String))
-                    , ("author", compileElmType (Proxy @ String))
-                    , ("pages", compileElmType (Proxy @ Int))
+                    [ ("title", compileElmType (Proxy @String))
+                    , ("author", compileElmType (Proxy @String))
+                    , ("pages", compileElmType (Proxy @Int))
                     ]
                 , ea_omit_null = False
                 , ea_newtype = False
                 , ea_unwrap_unary = True
                 }
-          toElmAlias (Proxy @ Book) @?= expected
+          toElmAlias (Proxy @Book) @?= expected
       ]
   ]
 

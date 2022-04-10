@@ -13,13 +13,13 @@ main :: IO ()
 main = defaultMain $ testGroup "Data.Extensible.Elm.Mapping"
   [ testGroup "compileElmRecordTypeWith"
       [ testCase "compile Haskell's User type definition" $
-          renderElm (compileElmType (Proxy @ User)) @?= "User"
+          renderElm (compileElmType (Proxy @User)) @?= "User"
       , testCase "compile Haskell's Message type difinition" $
-          renderElm (compileElmType (Proxy @ Message)) @?= "Message"
+          renderElm (compileElmType (Proxy @Message)) @?= "Message"
       ]
   , testGroup "compileElmRecordAliasWith"
       [ testCase "compile Haskell's User type definition" $
-          renderElm (compileElmDef (Proxy @ User)) @?= unlines
+          renderElm (compileElmDef (Proxy @User)) @?= unlines
             [ "type alias User  ="
             , "   { id: Int"
             , "   , name: String"
@@ -27,7 +27,7 @@ main = defaultMain $ testGroup "Data.Extensible.Elm.Mapping"
             , "   }"
             ]
       , testCase "compile Haskell's Message type difinition" $
-          renderElm (compileElmDef (Proxy @ Message)) @?= unlines
+          renderElm (compileElmDef (Proxy @Message)) @?= unlines
             [ "type alias Message  ="
             , "   { id: Int"
             , "   , text: String"

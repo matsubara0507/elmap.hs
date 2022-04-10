@@ -14,8 +14,8 @@ main = do
     ["Generated", "API"]
     defElmImports
     "elm-src"
-    [DefineElm (Proxy @ Todo)]
-    (Proxy @ ("api" :> CRUD))
+    [DefineElm (Proxy @Todo)]
+    (Proxy @("api" :> CRUD))
   mapM_ system
     [ "elm make elm-src/Main.elm --output=static/main.js"
     , "elm-format --yes elm-src/Generated/"

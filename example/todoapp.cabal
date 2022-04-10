@@ -4,10 +4,10 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 8b14774313df6dd212861bfb66d25479267d13df131c8cfa2a0719239fcdae85
+-- hash: ffb173aaa64d5773d22622228d7cc56538bc45cc35da6fd8f4d95553798fb481
 
 name:           todoapp
-version:        0.1.0.0
+version:        0.1.0.1
 description:    Please see the README on GitHub at <https://github.com/matsubara0507/elmap#readme>
 homepage:       https://github.com/matsubara0507/elmap#readme
 bug-reports:    https://github.com/matsubara0507/elmap/issues

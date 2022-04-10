@@ -19,9 +19,9 @@ instance IsElmDefinition User where
 using ghci:
 
 ```
->>> putStrLn $ renderElm $ compileElmType (Proxy @ Book)
+>>> putStrLn $ renderElm $ compileElmType (Proxy @Book)
 Book
->>> putStrLn $ renderElm $ compileElmDef (Proxy @ Book)
+>>> putStrLn $ renderElm $ compileElmDef (Proxy @Book)
 type alias Book  =
    { title: String
    , author: String
