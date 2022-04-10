@@ -1,3 +1,5 @@
+{-# OPTIONS_GHC -fno-warn-orphans #-}
+
 module Servant.Elm.Mapping
   ( module X
   , ElmOptions (..)
@@ -15,6 +17,7 @@ import qualified Data.Text                     as T
 import           Data.Text.IO                  as TIO
 import           Elm.Mapping                   as X
 import qualified Elm.Module                    as Elm
+import           Servant.API.ContentTypes      (NoContent)
 import           Servant.Elm.Internal.Generate (ElmOptions (..), Namespace,
                                                 defElmImports, defElmOptions,
                                                 docToText,
@@ -22,6 +25,8 @@ import           Servant.Elm.Internal.Generate (ElmOptions (..), Namespace,
 import           Servant.Elm.Mapping.Foreign   as X
 import qualified Servant.Foreign               as F
 import           System.Directory              (createDirectoryIfMissing)
+
+instance IsElmType NoContent where compileElmType _ = toElmType (Proxy @())
 
 generateElmModuleWith ::
   (F.HasForeign LangElmap EType api, F.GenerateList EType (F.Foreign EType api))

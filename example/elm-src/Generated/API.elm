@@ -1,4 +1,4 @@
-module Generated.API exposing (Todo, deleteApiTodosById, getApiTodos, jsonDecTodo, jsonEncTodo, postApiTodos, putApiTodosById)
+module Generated.API exposing (..)
 
 -- The following module comes from bartavelle/json-helpers
 

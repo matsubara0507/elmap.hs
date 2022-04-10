@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: df459360e9b5537bd50ebb8e481cdc94974ed0296a2db10df58dabbbf36dcfb2
+-- hash: c34db43a2cf572dc8c48be772021ab6b496fb74d6c3e4c6a807a78e326e0be9d
 
 name:           servant-elmap
 version:        0.1.0.1
@@ -49,7 +49,7 @@ library
     , directory
     , elm-bridge >=0.5
     , elmap
-    , servant >=0.8
+    , servant >=0.17
     , servant-elm >=0.6
     , servant-foreign >=0.8
     , text
@@ -81,7 +81,7 @@ test-suite servant-elmap-test
     , directory
     , elm-bridge >=0.5
     , elmap
-    , servant >=0.8
+    , servant >=0.17
     , servant-elm >=0.6
     , servant-elmap
     , servant-foreign >=0.8

@@ -43,7 +43,7 @@ dependencies:
 - elmap
 - elm-bridge >= 0.5
 - servant-elm >= 0.6
-- servant >= 0.8
+- servant >= 0.17
 - servant-foreign >= 0.8
 - text
 - wl-pprint-text

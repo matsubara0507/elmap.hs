@@ -43,9 +43,9 @@ type API =
          :> Get '[JSON] [Book]
   :<|> "books"
          :> ReqBody '[JSON] Book
-         :> PostNoContent '[JSON] ()
+         :> PostNoContent
   :<|> "nothing"
-         :> GetNoContent '[JSON] ()
+         :> GetNoContent
   :<|> "nothing"
          :> Put '[JSON] () -- old way to specify no content
   :<|> "with-a-header"
